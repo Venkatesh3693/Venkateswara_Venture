@@ -1,37 +1,22 @@
-document.getElementById("sparkEffect").addEventListener("mouseover", function (e) {
-    const createSpark = () => {
-        const spark = document.createElement("div");
-        spark.className = "spark";
-        spark.style.left = `${e.pageX}px`;
-        spark.style.top = `${e.pageY}px`;
-        document.body.appendChild(spark);
-
-        setTimeout(() => {
-            spark.remove();
-        }, 500); // Remove spark after animation
-    };
-
-    for (let i = 0; i < 50; i++) {
-        const angle = Math.random() * 2 * Math.PI;
-        const radius = Math.random() * 50;
-        const x = e.pageX + radius * Math.cos(angle);
-        const y = e.pageY + radius * Math.sin(angle);
-        setTimeout(() => createSpark(x, y), i * 20); // Create multiple sparks with slight delay
-    }
-});
-
-document.getElementById("sparkEffect").addEventListener("mousemove", function (e) {
+// Function to create a spark element
+const createSpark = (x, y) => {
     const spark = document.createElement("div");
     spark.className = "spark";
-    spark.style.left = `${e.pageX}px`;
-    spark.style.top = `${e.pageY}px`;
+    spark.style.left = `${x}px`;
+    spark.style.top = `${y}px`;
     document.body.appendChild(spark);
 
     setTimeout(() => {
         spark.remove();
     }, 500); // Remove spark after animation
+};
+
+// Mousemove event handler for the entire document
+document.addEventListener("mousemove", function (e) {
+    createSpark(e.pageX, e.pageY);
 });
 
+// Form submission handling
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contact-form');
 

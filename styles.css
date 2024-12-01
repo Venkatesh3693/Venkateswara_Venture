@@ -451,3 +451,66 @@ footer {
         font-size: 1.2rem; /* Further adjust font size for smaller devices */
     }
 }
+
+.about-us {
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-us:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about-us h2 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.about-us .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-us .content p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us h2 {
+        font-size: 2rem;
+    }
+
+    .about-us .content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-us .content p {
+        font-size: 0.9rem;
+    }
+}
