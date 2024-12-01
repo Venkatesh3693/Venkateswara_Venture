@@ -44,12 +44,16 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    text-align: center; /* Center the text */
+    width: 100%; /* Ensure the title takes the full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .title h1 {
     margin: 0;
     font-size: 2rem;
     font-weight: bold;
+    word-wrap: break-word; /* Break long words and prevent overflow */
 }
 
 .red {
@@ -380,6 +384,53 @@ footer {
     .right a {
         margin: 0.5rem 0;
     }
+
+    .title h1 {
+        font-size: 1.5rem; /* Adjust font size for smaller devices */
+        text-align: center; /* Center-align text for better readability */
+    }
+}
+
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text {
+        font-size: 1.2rem;
+    }
+
+    .about-us, .services {
+        padding: 1rem;
+    }
+
+    .service {
+        flex: 1 1 calc(50% - 2rem);
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .right a {
+        margin: 0.5rem 0;
+    }
+
+    .title h1 {
+        font-size: 1.5rem; /* Adjust font size for smaller devices */
+        text-align: center; /* Center-align text for better readability */
+    }
 }
 
 @media (max-width: 480px) {
@@ -394,5 +445,9 @@ footer {
 
     .right a {
         margin: 0.5rem 0;
+    }
+
+    .title h1 {
+        font-size: 1.2rem; /* Further adjust font size for smaller devices */
     }
 }
