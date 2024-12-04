@@ -649,13 +649,19 @@ footer {
     
 }
 
+/* @media (max-width: 480px){
+    .nav .right{
+
+    }
+} */
+
 @media (max-width: 480px) {
     .service {
         flex: 1 1 100%;
     }
 
     .right {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 
