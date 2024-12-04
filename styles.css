@@ -758,6 +758,14 @@ footer {
     .service {
         width: calc(50% - 2rem);
     }
+
+    .flip-card-back {
+        background-color: #2980b9;
+        color: white;
+        transform: rotateY(180deg);
+        padding: 20px;
+        font-size: smaller;
+    }
 }
 
 @media (max-width: 480px) {
@@ -857,6 +865,15 @@ footer {
     .flip-card1 {
         width: 100%; /* Ensure the card fits properly on smaller screens */
         margin-left: 0;
+    }
+
+    .flip-card-back1 {
+        background-color: #2980b9;
+        color: white;
+        transform: rotateY(180deg);
+        padding: 20px;
+        font-size: smaller;
+        
     }
 }
 
