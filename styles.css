@@ -919,10 +919,12 @@ nav ul li a:hover{
 
 .vision-mission .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Ensure columns layout */
     align-items: center;
     gap: 3rem;
     position: relative;
+    text-align: center;
+    margin: 0 auto; /* Center the container */
 }
 
 .vision-mission h2 {
@@ -944,16 +946,15 @@ nav ul li a:hover{
     padding: 0 20px; /* Add horizontal padding for balanced space */
 }
 
-
 @media (min-width: 768px) {
     .vision-mission .container {
-        flex-direction: row;
+        flex-direction: column; /* Maintain column layout on larger screens */
         justify-content: space-around;
     }
 
     .vision-mission .vision, .vision-mission .mission {
         flex: 1;
-        max-width: 45%;
+        max-width: 100%; /* Ensure full width */
     }
 }
 
@@ -1011,6 +1012,7 @@ nav ul li a:hover{
 .vision-mission .mission p {
     animation-delay: 1.5s;
 }
+
 
 .logo {
     cursor: pointer;
